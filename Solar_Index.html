@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Solar Calculator</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-1 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+
+
+                    <!-- Topbar Navbar -->
+                   
+                        <!-- Nav Item - Alerts -->
+
+
+                        <!-- Nav Item - Messages -->
+
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <div class="text-center">
+                            <img class=" img-fluid px-3 px-sm-4 mt-10 mb-2 ml-10" style="width: 25rem; height: 4.5rem; "
+                                src="img/Banner.png" alt="...">
+                        </div>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Key Facts</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+                        <!-- Totl Area -->
+                        <div class="col-xl-2 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-info text-uppercase mb-1">
+                                                Area Selected
+                                            </div>
+
+                                            <div id="area" class="h5 mb-0 font-weight-bold text-gray-800">100 sq.m</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-draw-polygon fa-3x text-gray-300"></i>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Number of Panels Card Example -->
+                        <div class="col-xl-2 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+                                                No. Panels</div>
+                                            <div id="panels" class="h5 mb-0 font-weight-bold text-gray-800">50</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-solar-panel fa-3x text-gray-300"></i>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- System capacity -->
+                        <div class="col-xl-2 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div  class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                System Size</div>
+                                            <div id="systemSize" class="h5 mb-0 font-weight-bold text-gray-800">40kW</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-bolt fa-3x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solar Production -->
+                        <div class="col-xl-2 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                Production</div>
+                                            <div id="production" class="h5 mb-0 font-weight-bold text-gray-800">50kWh/y</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-power-off fa-3x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Capital Cost -->
+                        <div class="col-xl-2 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-warning text-uppercase mb-1">
+                                                Capital Cost</div>
+                                            <div id="capitalCost" class="h5 mb-0 font-weight-bold text-gray-800">5000 OMR</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-3x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Savings in Bill -->
+                        <div class="col-xl-2 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-warning text-uppercase mb-1">
+                                                Bill Savings</div>
+                                            <div id="billSavings" class="h5 mb-0 font-weight-bold text-gray-800">5000 OMR</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-piggy-bank fa-3x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+                    <!-- ################################### MAP ##################################### -->
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="container-fluid">
+                            <div class="card shadow mb-1">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between" >
+                                    <h6 class="m-0 font-weight-bold text-primary text-uppercase">Select the area where you want to install solar Panels</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body" >
+                                    <div id="map" class="chart-area"  style="min-height: 600px">
+                                        <!-- <canvas id="map"></canvas> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                        <!--############################### 
+                            Environmental Benefits
+                        ##################################### -->
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="card bg-success text-white shadow mb-2">
+                                <div class="card-body text-center ">
+                                    <h1>Environmental Benefits</h1>
+                                    <div class="text-white-50 small">Solar has no emissions. It just silently generates pure, clean energy.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- CO2 -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                Avoided CO₂ per year
+                                            </div>
+
+                                            <div id="co2" class="h5 mb-0 font-weight-bold text-gray-800">100 Tons</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-industry fa-3x text-gray-300"></i>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tree -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                Equivalent to Plannting
+                                            </div>
+
+                                            <div id="trees" class="h5 mb-0 font-weight-bold text-gray-800">100 Trees </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-tree fa-3x text-gray-300"></i>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!-- Drive -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
+                                                Equivalent to avoided driving of 
+                                            </div>
+
+                                            <div id="driving" class="h5 mb-0 font-weight-bold text-gray-800">5000 KM </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-car fa-3x text-gray-300"></i>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="container-fluid">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">System Performance</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="myAreaChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pie Chart -->
+
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <div class="container-fluid">
+
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">What are you waiting for?</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="img/undraw_japan_ubgk.svg" alt="...">
+                                    </div>
+                                    <p>Installing solar panels in your home will help control your electricity costs and reduce your bills. The mechanism developed for the incentives to benefit from the electricity exported to the network, which was produced by the solar cells for self-consumption and the export of surplus to the network.
+                                        <h3><br>To get started checkout <a href="https://www.apsr.om/en/sahim" target="_blank" rel="noopener noreferrer"> SAHIM Initiative</a> from the Authority for Public Services Regulation
+                                        </h3>
+                                        
+                                    </p> 
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Solar Calculator 2021</span>
+                        <a href="https://ozeidi.wordpress.com/"> Omar Al Zeidi</a>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+
+    <!-- MAPPING TOOLS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css">
+
+    <!-- Page level custom scripts -->
+    <script type="module"  src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/map.js"></script>
+
+</body>
+
+</html>
