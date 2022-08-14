@@ -39,7 +39,7 @@
     <!-- <a href="https://github.com/Ozeidi/Solar-Calculater"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
-    <a href="https://github.com/Ozeidi/Solar-Calculater">View Demo</a>
+    <a href="https://solar-calculator-poc.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/Ozeidi/Solar-Calculater/issues">Report Bug</a>
     ·
@@ -132,7 +132,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/omazei) - ozeidi91@gmail.com
+Omar - [@omazei](https://twitter.com/omazei) - ozeidi91@gmail.com
 
 Project Link: [https://github.com/Ozeidi/Solar-Calculater](https://github.com/Ozeidi/Solar-Calculater)
 
@@ -140,9 +140,6 @@ Project Link: [https://github.com/Ozeidi/Solar-Calculater](https://github.com/Oz
 
 
 
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
