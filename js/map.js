@@ -147,3 +147,9 @@ function SolarCalc(areaSelected) {
 // let co2Savings = parseFloat(systemProduction *(0.519/1000)).toFixed(1);
 // let minExpectedCost = parseFloat(400 * installedPower).toFixed(1);
 // let maxExpectedCost = parseFloat(450 * installedPower).toFixed(1);
+
+
+window.onload = function() {
+  // SolarCalc(0)
+  // new L.Draw.Polygon(map, drawControl.options.polygon).enable();
+};
